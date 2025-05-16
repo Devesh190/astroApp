@@ -2,15 +2,15 @@
 
 A new Flutter project.
 
-## Getting Started
+## Tech Stack
+Flutter SDK: 3.19.4
 
-This project is a starting point for a Flutter application.
+State Management: Provider
 
-A few resources to get you started if this is your first Flutter project:
+## State Management Explanation
+We are using the Provider package for state management in this screen. The HomeProvider 
+is responsible for managing the loading state (isLoading) and providing data for menu items, 
+live experts, and expert lists. The Consumer<HomeProvider> widget is used to listen for changes 
+and update the UI accordingly.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
