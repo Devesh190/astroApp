@@ -16,6 +16,11 @@ class Expert {
   final int totalReviewCount;
   final List<Review> reviews;
   final bool isOnline;
+  final String profileImage;
+  final List<String> images;
+  final String videoCallRate;
+  final String chatRate;
+  final String phoneCallRate;
 
   Expert({
     required this.id,
@@ -33,6 +38,11 @@ class Expert {
     required this.totalReviewCount,
     required this.reviews,
     required this.isOnline,
+    required this.profileImage,
+    required this.images,
+    required this.chatRate,
+    required this.phoneCallRate,
+    required this.videoCallRate
   });
 
   factory Expert.fromJson(Map<String, dynamic> json) {
@@ -54,6 +64,11 @@ class Expert {
           .map((review) => Review.fromJson(review))
           .toList(),
       isOnline: json['isOnline'],
+      profileImage: json['profileImage'],
+      images: List<String>.from(json['images']),
+      videoCallRate: json['videoCallRate'],
+      chatRate: json['chatRate'],
+      phoneCallRate: json['phoneCallRate']
     );
   }
 
@@ -74,6 +89,8 @@ class Expert {
       'totalReviewCount': totalReviewCount,
       'reviews': reviews.map((review) => review.toJson()).toList(),
       'isOnline': isOnline,
+      'profileImage': profileImage,
+      'images': images,
     };
   }
 }

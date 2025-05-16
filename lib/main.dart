@@ -7,7 +7,10 @@ import 'feature/home/provider/bottom_nav_provider.dart';
 
 void main() {
   runApp(MultiProvider(
-    providers: [ChangeNotifierProvider(create: (_) => BottomNavProvider()),ChangeNotifierProvider(create: (_) => HomeProvider())],
+    providers: [
+      ChangeNotifierProvider(create: (_) => BottomNavProvider()),
+      ChangeNotifierProvider(create: (_) => HomeProvider())
+    ],
     child: const MyApp(),
   ));
 }
@@ -19,8 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'astroApp',
+      debugShowCheckedModeBanner: false,
       home: Dashboard(),
     );
   }
 }
-
